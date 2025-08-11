@@ -83,7 +83,7 @@ Open your browser and go to: http://localhost:3000
 
 
 🙋‍♂️ Author
-    Aryan Raj
-    Email:raj981176@gmail.com
-📍 Gaya, Bihar | 🏫 MAIT (2022–26)
+    Rphit Sharma
+    Email:rohit.sharma.working@gmail.com
+📍 Delhi NCR | 🏫 MAIT (2022–26)
 
