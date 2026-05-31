@@ -2,7 +2,10 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const { v4: uuid } = require("uuid");
 
-
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv').config();
 
 
 const app = express();
