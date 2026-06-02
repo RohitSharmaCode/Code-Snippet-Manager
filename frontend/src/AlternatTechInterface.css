@@ -1,0 +1,250 @@
+/* =========================
+   FUTURISTIC TECH THEME
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #050b0f;
+  color: #e8fdf5;
+  overflow-x: hidden;
+}
+
+/* Animated Grid Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(0, 255, 170, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.08) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right,
+      rgba(0, 255, 170, 0.15),
+      transparent 40%),
+    radial-gradient(circle at bottom left,
+      rgba(0, 170, 255, 0.12),
+      transparent 40%);
+  z-index: -1;
+}
+
+/* Main App */
+.App {
+  text-align: center;
+}
+
+/* Logo */
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 0 20px #00ffaa)
+    drop-shadow(0 0 40px #00ffaa);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: pulse-spin 15s linear infinite;
+  }
+}
+
+/* Full Screen Hero */
+.App-header {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+/* Glass Cyber Panel */
+.container {
+  width: min(900px, 95%);
+  margin: 40px auto;
+  padding: 35px;
+
+  background: rgba(10, 20, 25, 0.75);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 24px;
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 170, 0.15),
+    inset 0 0 20px rgba(0, 255, 170, 0.05);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Neon Border Effect */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 170, 0.25),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  animation: scan 5s linear infinite;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #00ffaa,
+    #00e5ff,
+    #00ffaa
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+h2,
+h3 {
+  color: #8effd8;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #b8d6ce;
+  line-height: 1.7;
+}
+
+/* Futuristic Button */
+.run-btn {
+  margin-top: 25px;
+  padding: 14px 30px;
+
+  border: 1px solid #00ffaa;
+  border-radius: 12px;
+
+  background: transparent;
+  color: #00ffaa;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.run-btn:hover {
+  background: #00ffaa;
+  color: #04130d;
+
+  box-shadow:
+    0 0 15px #00ffaa,
+    0 0 30px #00ffaa,
+    0 0 50px rgba(0, 255, 170, 0.5);
+
+  transform: translateY(-3px);
+}
+
+.run-btn:active {
+  transform: scale(0.96);
+}
+
+/* Links */
+.App-link {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.App-link:hover {
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #081116;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffaa;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes pulse-spin {
+  0% {
+    transform: rotate(0deg);
+    filter:
+      drop-shadow(0 0 15px #00ffaa);
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 35px #00ffaa)
+      drop-shadow(0 0 60px #00e5ff);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter:
+      drop-shadow(0 0 15px #00ffaa);
+  }
+}
+
+@keyframes scan {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .run-btn {
+    width: 100%;
+  }
+}
